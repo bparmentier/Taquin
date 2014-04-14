@@ -80,6 +80,7 @@ void ImageObservateur::rafraichir(SujetDObservation *sdo) {
             }
         }
     }
+    this->adjustSize();
 }
 
 void ImageObservateur::handleClick(unsigned i, unsigned j) {
@@ -109,7 +110,7 @@ void ImageObservateur::naviguer() {
 
 void ImageObservateur::traitementImage() { // FIXME
     if (image.height() > 500 || image.width() > 500) {
-        image = image.scaled(500, 500, Qt::KeepAspectRatioByExpanding);
+        image = image.scaled(500, 500, Qt::KeepAspectRatio);
     }
 }
 
