@@ -1,3 +1,8 @@
+/*!
+ * \file dialogdimensions.h
+ * \brief Définitions de la classe DialogDimensions
+ */
+
 #ifndef DIALOGDIMENSIONS_H
 #define DIALOGDIMENSIONS_H
 
@@ -7,6 +12,11 @@ namespace Ui {
 class DialogDimensions;
 }
 
+//! Classe DialogDimensions
+/*!
+ * \brief Boîte de dialogue pour la sélection des dimensions de la grille
+ * \author Bruno Parmentier
+ */
 class DialogDimensions : public QDialog
 {
     Q_OBJECT

@@ -1,3 +1,8 @@
+/*!
+ * \file TexteObservateur.h
+ * \brief Définition de la classe TexteObservateur.
+ */
+
 #ifndef TEXTEOBSERVATEUR_H
 #define TEXTEOBSERVATEUR_H
 
@@ -8,6 +13,12 @@
 
 class Taquin;
 
+//! Classe TexteObservateur
+/*!
+ * \brief Observateur texte du jeu de taquin
+ * \see Observateur
+ * \author Bruno Parmentier
+ */
 class TexteObservateur : public QLabel, public Observateur {
 private:
     Taquin *jeu;

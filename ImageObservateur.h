@@ -1,3 +1,8 @@
+/*!
+ * \file ImageObservateur.h
+ * \brief Définition de la classe ImageObservateur.
+ */
+
 #ifndef IMAGEOBSERVATEUR_H
 #define IMAGEOBSERVATEUR_H
 
@@ -14,6 +19,12 @@
 
 class Taquin;
 
+//! Classe ImageObservateur
+/*!
+ * \brief Observateur image du jeu de taquin
+ * \see Observateur
+ * \author Bruno Parmentier
+ */
 class ImageObservateur : public QWidget, public Observateur {
     Q_OBJECT
 
