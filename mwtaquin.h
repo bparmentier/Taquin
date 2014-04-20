@@ -2,18 +2,19 @@
 #define MWTAQUIN_H
 
 #include <QMainWindow>
+#include <sstream>
+#include <QVBoxLayout>
+#include <QTimer>
 #include "metier/moteur/Taquin.h"
 #include "TexteObservateur.h"
 #include "GraphiqueObservateur.h"
 #include "ImageObservateur.h"
-#include <sstream>
-#include <QVBoxLayout>
-#include <QTimer>
 
 namespace Ui {
 class MWTaquin;
 }
 
+/* Fenêtre principale du jeu de taquin */
 class MWTaquin : public QMainWindow
 {
     Q_OBJECT
