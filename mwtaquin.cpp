@@ -25,7 +25,6 @@ MWTaquin::MWTaquin(QWidget *parent) :
     ui->wGrilleGraphique->setLayout(vbLayoutGraph);
     vbLayoutGraph->setAlignment(Qt::AlignCenter);
 
-    //ui->gbDirection->setEnabled(true);
     ui->pbHaut->setDisabled(true);
     ui->pbDroite->setDisabled(true);
     ui->pbBas->setDisabled(true);
@@ -38,7 +37,6 @@ MWTaquin::MWTaquin(QWidget *parent) :
     ui->lbColonne->setDisabled(true);
 
     ui->menuVues->setDisabled(true);
-    //timer = new QTimer(0);
     temps = 0;
 
     connexion();
@@ -112,15 +110,12 @@ void MWTaquin::nouveauJeu() {
             obsImage = nullptr;
 
             /* timer */
-            //delete timer;
-            timer = nullptr;
             temps = 0;
-            timer = new QTimer(0);
 
             /* taquin */
             taquin = nullptr;
         }
-        Position position = {0, 0}; // TEMPORAIRE
+        Position position = {0, 0};
         taquin = new Taquin(dimensions, position, false);
 
 
@@ -134,6 +129,7 @@ void MWTaquin::nouveauJeu() {
 
     ui->action_Melanger->setEnabled(true);
     ui->action_Resoudre->setEnabled(true);
+
     ui->pbHaut->setEnabled(true);
     ui->pbDroite->setEnabled(true);
     ui->pbBas->setEnabled(true);
