@@ -1,12 +1,9 @@
 #include <iostream>
-//#include <cmath>
+#include <algorithm>
 #include "Taquin.h"
 #include "Piece.h"
 #include "TaquinException.h"
 #include "Direction.h"
-#include <algorithm>
-
-/* Méthodes publiques */
 
 Taquin::Taquin() {}
 
@@ -140,8 +137,10 @@ bool Taquin::verifierDeplacement(Position positionPiece) {
 
     /* le déplacement doit être égal à 1 pour que la pièce soit adjacente à la
      * case vide */
-    int deplacement = abs((int) positionPiece.ligne - (int) positionVide.ligne)
-            + abs((int) positionPiece.colonne - (int) positionVide.colonne);
+    int deplacement = abs(static_cast<int> (positionPiece.ligne)
+                          - static_cast<int> (positionVide.ligne))
+            + abs(static_cast<int> (positionPiece.colonne)
+                  - static_cast<int> (positionVide.colonne));
 
     return (!horsLimites && (deplacement == 1));
 }
