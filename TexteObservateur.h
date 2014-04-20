@@ -13,12 +13,7 @@
 
 class Taquin;
 
-//! Classe TexteObservateur
-/*!
- * \brief Observateur texte du jeu de taquin
- * \see Observateur
- * \author Bruno Parmentier
- */
+/* Observateur texte du jeu de taquin */
 class TexteObservateur : public QLabel, public Observateur {
 private:
     Taquin *jeu;

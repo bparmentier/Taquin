@@ -1,8 +1,3 @@
-/*!
- * \file GraphiqueObservateur.h
- * \brief Définition de la classe GraphiqueObservateur.
- */
-
 #ifndef GRAPHIQUEOBSERVATEUR_H
 #define GRAPHIQUEOBSERVATEUR_H
 
@@ -16,12 +11,7 @@
 
 class Taquin;
 
-//! Classe GraphiqueObservateur
-/*!
- * \brief Observateur graphique du jeu de taquin
- * \see Observateur
- * \author Bruno Parmentier
- */
+/* Observateur graphique du jeu de taquin */
 class GraphiqueObservateur : public QWidget, public Observateur {
 private:
     Taquin *jeu;

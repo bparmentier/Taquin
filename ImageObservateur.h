@@ -1,13 +1,6 @@
-/*!
- * \file ImageObservateur.h
- * \brief Définition de la classe ImageObservateur.
- */
-
 #ifndef IMAGEOBSERVATEUR_H
 #define IMAGEOBSERVATEUR_H
 
-#include "metier/moteur/Taquin.h"
-#include "metier/O_SDO/observateur.h"
 #include <QWidget>
 #include <QGridLayout>
 #include <QVBoxLayout>
@@ -16,15 +9,12 @@
 #include <QFileDialog>
 #include <QMenuBar>
 #include <QAction>
+#include "metier/moteur/Taquin.h"
+#include "metier/O_SDO/observateur.h"
 
 class Taquin;
 
-//! Classe ImageObservateur
-/*!
- * \brief Observateur image du jeu de taquin
- * \see Observateur
- * \author Bruno Parmentier
- */
+/* Observateur image du jeu de taquin */
 class ImageObservateur : public QWidget, public Observateur {
     Q_OBJECT
 
