@@ -36,7 +36,6 @@ MWTaquin::MWTaquin(QWidget *parent) :
     ui->lbLigne->setDisabled(true);
     ui->lbColonne->setDisabled(true);
 
-    ui->menuVues->setDisabled(true);
     temps = 0;
 
     connexion();
@@ -127,21 +126,28 @@ void MWTaquin::nouveauJeu() {
     observateurTexte(true);
     observateurGraphique(true);
 
+    /* menu */
     ui->action_Melanger->setEnabled(true);
     ui->action_Resoudre->setEnabled(true);
+    ui->menuVues->setEnabled(true);
+    ui->menuChiffres->setEnabled(true);
+    ui->action_Texte->setEnabled(true);
+    ui->action_Graphique->setEnabled(true);
+    ui->action_Image->setEnabled(true);
 
+    /* directions */
     ui->pbHaut->setEnabled(true);
     ui->pbDroite->setEnabled(true);
     ui->pbBas->setEnabled(true);
     ui->pbGauche->setEnabled(true);
-    ui->pbValiderPosition->setEnabled(true);
 
+    /* positions */
     ui->sbLigne->setEnabled(true);
     ui->sbColonne->setEnabled(true);
     ui->lbLigne->setEnabled(true);
     ui->lbColonne->setEnabled(true);
+    ui->pbValiderPosition->setEnabled(true);
 
-    ui->menuVues->setEnabled(true);
     ui->sbLigne->setMaximum(dimensions - 1);
     ui->sbColonne->setMaximum(dimensions - 1);
 

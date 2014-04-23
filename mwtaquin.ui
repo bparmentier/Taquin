@@ -313,6 +313,9 @@
     <addaction name="action_Quitter"/>
    </widget>
    <widget class="QMenu" name="menuVues">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="title">
      <string>&amp;Vues</string>
     </property>
@@ -339,7 +342,7 @@
   </action>
   <action name="action_Image">
    <property name="enabled">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>&amp;Image</string>
@@ -353,7 +356,10 @@
     <bool>true</bool>
    </property>
    <property name="checked">
-    <bool>true</bool>
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>&amp;Texte</string>
@@ -367,10 +373,10 @@
     <bool>true</bool>
    </property>
    <property name="checked">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
    <property name="enabled">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>&amp;Graphique</string>
