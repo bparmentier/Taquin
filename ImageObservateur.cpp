@@ -24,6 +24,7 @@ ImageObservateur::ImageObservateur(SujetDObservation *sdo, QWidget *parent) :
 
     creerMenu();
 
+    /* création de la grille de QPushButton */
     for (unsigned i = 0; i < jeu->getTaille(); i++) { // lignes
         std::vector<QPushButton *> lignePieces;
         grille.push_back(lignePieces);
@@ -60,6 +61,7 @@ void ImageObservateur::rafraichir(SujetDObservation *sdo) {
     int largeur;
     int hauteur;
 
+    /* application de la partie de l'image correspondante à chaque case */
     for (unsigned i = 0; i < jeu->getTaille(); i++) {
         for (unsigned j = 0; j < jeu->getTaille(); j++) {
             if (jeu->getPiece({i, j}).estCaseVide()) {
@@ -108,7 +110,8 @@ void ImageObservateur::naviguer() {
 
 }
 
-void ImageObservateur::traitementImage() { // FIXME
+void ImageObservateur::traitementImage() {
+    /* rendimensionnement si image trop grande */
     if (image.height() > 500 || image.width() > 500) {
         image = image.scaled(500, 500, Qt::KeepAspectRatio);
     }

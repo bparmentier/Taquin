@@ -13,8 +13,6 @@ GraphiqueObservateur::GraphiqueObservateur(SujetDObservation *sdo) :
     font.setPointSize(12);
     this->setFont(font);
 
-    //layout->setHorizontalSpacing(1);
-    //layout->setVerticalSpacing(0);
     this->setLayout(layout);
 
     for (unsigned i = 0; i < jeu->getTaille(); i++) { // lignes
@@ -22,9 +20,6 @@ GraphiqueObservateur::GraphiqueObservateur(SujetDObservation *sdo) :
         grille.push_back(lignePieces);
         for (unsigned j = 0; j < jeu->getTaille(); j++) { // colonnes
             auto piece = new QPushButton;
-            //piece->setFlat(true);
-            //piece->setCursor(QCursor(Qt::PointingHandCursor));
-            //piece->setFixedSize(50, 50);
 
             grille[i].push_back(piece);
             layout->addWidget(grille[i][j], i, j);

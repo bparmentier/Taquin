@@ -230,7 +230,6 @@ void MWTaquin::deplacerPosition() {
         Position position;
         position.ligne = ui->sbLigne->value();
         position.colonne = ui->sbColonne->value();
-        //cout << "taquin->deplacerPiece({" << position.ligne << "," << position.colonne << "})" << endl;
         taquin->deplacerPiece(position);
 
         majMouvements();
