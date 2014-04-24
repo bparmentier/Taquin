@@ -4,7 +4,7 @@
 
 ImageObservateur::ImageObservateur(SujetDObservation *sdo, QWidget *parent) :
     QWidget(parent),
-    image(QPixmap(":resources/images/evolution.jpg")),
+    image(QPixmap(":resources/images/sciencesDeLaTerre.jpg")),
     centralWidget(new QWidget),
     vLayout(new QVBoxLayout),
     gLayout(new QGridLayout) {
